@@ -1,0 +1,45 @@
+magic
+tech scmos
+timestamp 1668432137
+<< metal1 >>
+rect -3 106 0 110
+rect -48 81 0 85
+rect -82 -14 -72 -10
+rect -76 -16 -72 -14
+rect -48 -31 -44 81
+rect 107 55 126 59
+rect -16 31 4 35
+rect -16 -16 -12 31
+rect -82 -35 -44 -31
+rect -48 -94 -44 -35
+rect -16 -87 -12 -21
+rect -3 -66 37 -62
+rect -16 -91 34 -87
+rect -48 -98 34 -94
+rect 89 -99 126 -95
+<< m2contact >>
+rect -8 105 -3 110
+rect -76 -21 -71 -16
+rect 1 15 6 20
+rect -17 -21 -12 -16
+rect -8 -66 -3 -61
+rect 31 -121 36 -116
+<< metal2 >>
+rect -71 -21 -17 -17
+rect -8 -61 -4 105
+rect 2 -117 6 15
+rect 2 -121 31 -117
+use xor  xor_0
+timestamp 1638744199
+transform 1 0 21 0 1 86
+box -21 -86 90 26
+use and  and_0
+timestamp 1638582313
+transform 1 0 33 0 1 -86
+box 0 -34 56 24
+<< labels >>
+rlabel metal1 -82 -14 -77 -10 3 input1
+rlabel metal1 -82 -35 -77 -31 3 input2
+rlabel metal1 121 55 126 59 7 sum
+rlabel metal1 121 -99 126 -95 7 cout
+<< end >>

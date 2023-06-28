@@ -1,0 +1,54 @@
+.INCLUDE TSMC_180nm.txt
+* SPICE3 file created from or.ext - technology: scmos
+
+.option scale=0.09u
+.PARAM pvdd = 1
+.global gnd vdd
+
+VDS vdd 0 dc='pvdd'
+GRD gnd 0 dc=0
+
+Vin1 in1 gnd pulse 0 1.8 0ns 1ns 1ns 10ns 20ns
+Vin2 in2 gnd pulse 0 1.8 0ns 1ns 1ns 20ns 40ns
+
+M1000 gnd in2 a_15_n26# Gnd CMOSN w=4 l=2
++  ad=76 pd=62 as=40 ps=28
+M1001 a_15_6# in1 vdd w_0_0# CMOSP w=8 l=2
++  ad=80 pd=36 as=96 ps=56
+M1002 out a_15_n26# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1003 out a_15_n26# vdd w_0_0# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1004 a_15_n26# in2 a_15_6# w_0_0# CMOSP w=8 l=2
++  ad=56 pd=30 as=0 ps=0
+M1005 a_15_n26# in1 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 a_15_n26# w_0_0# 0.10fF
+C1 in1 vdd 0.02fF
+C2 in2 a_15_n26# 0.21fF
+C3 vdd w_0_0# 0.11fF
+C4 a_15_n26# vdd 0.11fF
+C5 out gnd 0.08fF
+C6 w_0_0# out 0.03fF
+C7 a_15_n26# out 0.05fF
+C8 in1 w_0_0# 0.06fF
+C9 in1 in2 0.27fF
+C10 a_15_n26# gnd 0.10fF
+C11 vdd out 0.11fF
+C12 in2 w_0_0# 0.06fF
+C13 gnd Gnd 0.24fF
+C14 out Gnd 0.10fF
+C15 vdd Gnd 0.13fF
+C16 a_15_n26# Gnd 0.32fF
+C17 in2 Gnd 0.26fF
+C18 in1 Gnd 0.23fF
+C19 w_0_0# Gnd 1.12fF
+
+.tran 0.1n 200n
+
+.control 
+run 
+plot v(out) v(in1)+2 v(in2)+4
+.endc 
+
+.end

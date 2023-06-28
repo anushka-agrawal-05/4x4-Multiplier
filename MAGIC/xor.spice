@@ -1,0 +1,86 @@
+.INCLUDE TSMC_180nm.txt
+* SPICE3 file created from xor.ext - technology: scmos
+.option scale=0.09u
+.PARAM pvdd = 1
+.global gnd vdd
+
+VDS vdd 0 dc='pvdd'
+GRD gnd 0 dc=0
+
+Vin1 in1 gnd pulse 0 1.8 0ns 1ns 1ns 10ns 20ns
+Vin2 in2 gnd pulse 0 1.8 0ns 1ns 1ns 20ns 40ns
+
+M1000 a_15_n62# in2 vdd w_2_n50# CMOSP w=8 l=2
++  ad=40 pd=26 as=176 ps=108
+M1001 gnd a_15_n12# a_66_n62# Gnd CMOSN w=4 l=2
++  ad=88 pd=76 as=32 ps=24
+M1002 a_46_6# a_15_n12# vdd w_32_0# CMOSP w=8 l=2
++  ad=64 pd=32 as=0 ps=0
+M1003 a_15_n12# in1 vdd w_2_0# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1004 a_15_n12# in1 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1005 a_66_n62# a_15_n62# out Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1006 vdd a_15_n62# a_66_6# w_32_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1007 out in1 a_46_n62# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1008 a_46_n62# in2 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 a_15_n62# in2 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1010 a_66_6# in1 out w_32_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1011 out in2 a_46_6# w_32_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 a_15_n12# gnd 0.08fF
+C1 w_2_0# a_15_n12# 0.03fF
+C2 vdd out 0.03fF
+C3 a_15_n62# out 0.08fF
+C4 in1 gnd 0.21fF
+C5 w_2_0# in1 0.06fF
+C6 w_32_0# a_15_n12# 0.19fF
+C7 in2 gnd 0.76fF
+C8 w_32_0# in1 0.06fF
+C9 vdd gnd 0.23fF
+C10 a_15_n62# gnd 0.31fF
+C11 w_2_0# vdd 0.05fF
+C12 w_32_0# in2 0.06fF
+C13 w_32_0# vdd 0.11fF
+C14 a_15_n12# in1 0.06fF
+C15 w_2_n50# in2 0.06fF
+C16 w_32_0# a_15_n62# 0.06fF
+C17 out gnd 0.04fF
+C18 w_2_n50# vdd 0.05fF
+C19 w_2_n50# a_15_n62# 0.03fF
+C20 a_15_n12# in2 0.02fF
+C21 a_15_n12# vdd 0.74fF
+C22 w_32_0# out 0.02fF
+C23 a_15_n12# a_15_n62# 0.02fF
+C24 in1 in2 0.11fF
+C25 in1 vdd 0.30fF
+C26 a_15_n12# out 0.08fF
+C27 in2 vdd 0.02fF
+C28 in2 a_15_n62# 0.36fF
+C29 in1 out 0.12fF
+C30 a_15_n62# vdd 0.11fF
+C31 gnd Gnd 0.64fF
+C32 out Gnd 0.23fF
+C33 vdd Gnd 0.17fF
+C34 a_15_n62# Gnd 0.26fF
+C35 in2 Gnd 0.39fF
+C36 in1 Gnd 1.62fF
+C37 a_15_n12# Gnd 0.17fF
+C38 w_2_n50# Gnd 0.48fF
+C39 w_32_0# Gnd 1.12fF
+C40 w_2_0# Gnd 0.48fF
+
+.tran 0.1n 200n
+
+.control 
+run 
+plot v(out) v(in1)+2 v(in2)+4
+.endc 
+
+.end

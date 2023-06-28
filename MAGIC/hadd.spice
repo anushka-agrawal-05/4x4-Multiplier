@@ -1,0 +1,113 @@
+.INCLUDE TSMC_180nm.txt
+* SPICE3 file created from hadd.ext - technology: scmos
+.option scale=0.09u
+.PARAM pvdd = 1
+.global gnd vdd
+
+VDS vdd 0 dc='pvdd'
+GRD gnd 0 dc=0
+
+Vin1 input1 gnd pulse 0 1 0ns 1ns 1ns 10ns 20ns
+Vin2 input2 gnd pulse 0 1 0ns 1ns 1ns 20ns 40ns
+
+M1000 and_0/a_15_6# input2 and_0/a_15_n26# Gnd CMOSN w=4 l=2
++  ad=28 pd=22 as=40 ps=28
+M1001 and_0/a_15_6# input1 vdd and_0/w_0_0# CMOSP w=8 l=2
++  ad=80 pd=36 as=328 ps=194
+M1002 cout and_0/a_15_6# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=136 ps=116
+M1003 cout and_0/a_15_6# vdd and_0/w_0_0# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1004 vdd input2 and_0/a_15_6# and_0/w_0_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 and_0/a_15_n26# input1 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1006 xor_0/a_15_n62# input1 vdd xor_0/w_2_n50# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1007 gnd xor_0/a_15_n12# xor_0/a_66_n62# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1008 xor_0/a_46_6# xor_0/a_15_n12# vdd xor_0/w_32_0# CMOSP w=8 l=2
++  ad=64 pd=32 as=0 ps=0
+M1009 xor_0/a_15_n12# input2 vdd xor_0/w_2_0# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1010 xor_0/a_15_n12# input2 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1011 xor_0/a_66_n62# xor_0/a_15_n62# sum Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1012 vdd xor_0/a_15_n62# xor_0/a_66_6# xor_0/w_32_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1013 sum input2 xor_0/a_46_n62# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1014 xor_0/a_46_n62# input1 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1015 xor_0/a_15_n62# input1 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1016 xor_0/a_66_6# input2 sum xor_0/w_32_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1017 sum input1 xor_0/a_46_6# xor_0/w_32_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 gnd xor_0/a_15_n12# 0.08fF
+C1 cout vdd 0.11fF
+C2 gnd vdd 0.47fF
+C3 input2 and_0/a_15_6# 0.21fF
+C4 gnd sum 0.04fF
+C5 cout and_0/w_0_0# 0.03fF
+C6 gnd input1 0.85fF
+C7 gnd xor_0/a_15_n62# 0.31fF
+C8 input2 xor_0/a_15_n12# 0.06fF
+C9 and_0/a_15_6# vdd 0.05fF
+C10 input2 vdd 0.39fF
+C11 input2 sum 0.12fF
+C12 and_0/a_15_6# input1 0.03fF
+C13 and_0/a_15_6# and_0/w_0_0# 0.09fF
+C14 xor_0/a_15_n12# vdd 0.74fF
+C15 input2 input1 1.14fF
+C16 input2 and_0/w_0_0# 0.06fF
+C17 xor_0/a_15_n12# sum 0.08fF
+C18 sum vdd 0.03fF
+C19 xor_0/a_15_n12# input1 0.02fF
+C20 input2 xor_0/w_32_0# 0.06fF
+C21 xor_0/a_15_n12# xor_0/a_15_n62# 0.02fF
+C22 vdd input1 0.20fF
+C23 and_0/w_0_0# vdd 0.14fF
+C24 xor_0/a_15_n62# vdd 0.11fF
+C25 xor_0/a_15_n12# xor_0/w_32_0# 0.19fF
+C26 input2 xor_0/w_2_0# 0.06fF
+C27 sum xor_0/a_15_n62# 0.08fF
+C28 and_0/w_0_0# input1 0.06fF
+C29 xor_0/w_32_0# vdd 0.11fF
+C30 xor_0/a_15_n62# input1 0.36fF
+C31 xor_0/a_15_n12# xor_0/w_2_0# 0.03fF
+C32 sum xor_0/w_32_0# 0.02fF
+C33 gnd cout 0.08fF
+C34 xor_0/w_32_0# input1 0.06fF
+C35 xor_0/w_2_0# vdd 0.05fF
+C36 xor_0/w_2_n50# vdd 0.05fF
+C37 xor_0/a_15_n62# xor_0/w_32_0# 0.06fF
+C38 xor_0/w_2_n50# input1 0.06fF
+C39 cout and_0/a_15_6# 0.05fF
+C40 gnd and_0/a_15_6# 0.08fF
+C41 xor_0/a_15_n62# xor_0/w_2_n50# 0.03fF
+C42 gnd input2 0.29fF
+C43 gnd Gnd 1.31fF
+C44 sum Gnd 0.30fF
+C45 vdd Gnd 0.82fF
+C46 xor_0/a_15_n62# Gnd 0.26fF
+C47 input1 Gnd 0.66fF
+C48 input2 Gnd 2.42fF
+C49 xor_0/a_15_n12# Gnd 0.17fF
+C50 xor_0/w_2_n50# Gnd 0.48fF
+C51 xor_0/w_32_0# Gnd 1.12fF
+C52 xor_0/w_2_0# Gnd 0.48fF
+C53 cout Gnd 0.23fF
+C54 and_0/a_15_6# Gnd 0.32fF
+C55 and_0/w_0_0# Gnd 1.12fF
+
+.tran 0.1n 200n
+
+.control 
+run 
+plot v(cout) v(sum)+2 v(input1)+4 v(input2)+8
+.endc 
+
+.end
