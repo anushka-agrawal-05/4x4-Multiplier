@@ -1,0 +1,119 @@
+input A:  0.9828 0.9828 0.9828 0.9828
+input B:  0.9828 0.9828 0.9828 0.9828
+worst case propagation delay:  1.44977E-09
+
+input A:  0.0172 0.9828 0.9828 0.0172
+input B:  0.9828 0.9828 0.0172 0.0172
+worst case propagation delay:  2.07336E-09
+
+input A:  0.0172 0.9828 0.0172 0.0172
+input B:  0.9828 0.9828 0.0172 0.0172
+worst case propagation delay:  1.44211E-09
+  
+input A:  0.0172 0.9828 0.0172 0.0172
+input B:  0.9828 0.9828 0.9828 0.0172
+worst case propagation delay:  1.46715E-09
+
+input A:  0.0172 0.9828 0.0172 0.0172
+input B:  0.0172 0.9828 0.9828 0.0172
+worst case propagation delay:  -4.47302E-10
+  
+input A:  0.0172 0.9828 0.0172 0.0172
+input B:  0.0172 0.9828 0.9828 0.9828
+worst case propagation delay:  4.19475E-10
+
+input A:  0.0172 0.9828 0.0172 0.9828
+input B:  0.0172 0.9828 0.9828 0.9828
+worst case propagation delay:  4.19475E-10
+
+input A:  0.9828 0.9828 0.0172 0.9828
+input B:  0.0172 0.9828 0.9828 0.9828
+worst case propagation delay:  1.94429E-09
+
+input A:  0.9828 0.9828 0.9828 0.9828
+input B:  0.0172 0.9828 0.9828 0.9828
+worst case propagation delay:  1.94544E-09
+
+input A:  0.9828 0.9828 0.9828 0.0172
+input B:  0.0172 0.9828 0.9828 0.9828
+worst case propagation delay:  1.94544E-09
+
+input A:  0.9828 0.9828 0.9828 0.0172
+input B:  0.0172 0.9828 0.9828 0.9828
+worst case propagation delay:  2.21026E-09
+
+input A:  0.9828 0.9828 0.9828 0.0172
+input B:  0.0172 0.9828 0.9828 0.0172
+worst case propagation delay:  2.18345E-09
+
+input A:  0.9828 0.9828 0.9828 0.9828
+input B:  0.0172 0.9828 0.9828 0.0172
+worst case propagation delay:  2.18345E-09
+
+input A:  0.9828 0.0172 0.9828 0.9828
+input B:  0.0172 0.9828 0.9828 0.0172
+worst case propagation delay:  2.17356E-09
+
+input A:  0.9828 0.0172 0.9828 0.9828
+input B:  0.0172 0.9828 0.9828 0.9828
+worst case propagation delay:  1.81345E-09
+
+input A:  0.9828 0.0172 0.9828 0.9828
+input B:  0.9828 0.9828 0.0172 0.9828
+worst case propagation delay:  4.66201E-10
+
+input A:  0.9828 0.0172 0.9828 0.0172
+input B:  0.9828 0.9828 0.0172 0.9828
+worst case propagation delay:  4.66197E-10
+
+input A:  0.0172 0.0172 0.9828 0.0172
+input B:  0.9828 0.9828 0.0172 0.9828
+worst case propagation delay:  4.66198E-10
+
+input A:  0.0172 0.0172 0.9828 0.0172
+input B:  0.0172 0.9828 0.0172 0.9828
+worst case propagation delay:  4.67297E-10
+
+input A:  0.0172 0.0172 0.9828 0.0172
+input B:  0.0172 0.9828 0.0172 0.9828
+worst case propagation delay:  7.89139E-10
+
+input A:  0.0172 0.0172 0.9828 0.0172
+input B:  0.0172 0.9828 0.9828 0.9828
+worst case propagation delay:  -2.89674E-10
+
+input A:  0.0172 0.0172 0.9828 0.9828
+input B:  0.0172 0.9828 0.9828 0.9828
+worst case propagation delay:  2.51619E-09
+
+input A:  0.0172 0.9828 0.9828 0.9828
+input B:  0.0172 0.9828 0.9828 0.9828
+worst case propagation delay:  2.84128E-09
+
+input A:  0.0172 0.9828 0.9828 0.9828
+input B:  0.0172 0.0172 0.9828 0.9828
+worst case propagation delay:  7.89449E-10
+
+input A:  0.0172 0.9828 0.9828 0.0172
+input B:  0.0172 0.0172 0.9828 0.9828
+worst case propagation delay:  9.20475E-10
+
+input A:  0.0172 0.9828 0.0172 0.0172
+input B:  0.0172 0.0172 0.9828 0.9828
+worst case propagation delay:  -7.00127E-10
+
+input A:  0.0172 0.9828 0.0172 0.9828
+input B:  0.0172 0.0172 0.9828 0.9828
+worst case propagation delay:  1.79406E-10
+
+input A:  0.0172 0.9828 0.9828 0.9828
+input B:  0.0172 0.0172 0.9828 0.0172
+worst case propagation delay:  1.76406E-10
+
+input A:  0.0172 0.9828 0.9828 0.9828
+input B:  0.0172 0.0172 0.9828 0.0172
+worst case propagation delay:  2.43428E-09
+
+input A:  0.0172 0.9828 0.9828 0.9828
+input B:  0.9828 0.0172 0.9828 0.0172
+worst case propagation delay:  2.04327E-09

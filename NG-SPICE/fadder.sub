@@ -1,0 +1,24 @@
+.include xor.sub
+.include and.sub
+.include or.sub
+
+.subckt halfadd in1 in2 cout sum vdd gnd
+
+xxor in1 in2 sum vdd gnd xor
+xand in1 in2 cout vdd gnd and
+
+Ccout cout gnd 1f
+Csum sum gnd 1f
+
+.ends
+
+.subckt fadder in1 in2 cin cout sum vdd gnd
+
+xhalfadder1 in1 in2 x y vdd gnd halfadd
+xhalfadder2 cin y z sum vdd gnd halfadd
+x_or x z cout vdd gnd or
+
+Ccout cout gnd 1f
+Csum sum gnd 1f
+
+.ends

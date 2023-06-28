@@ -1,0 +1,15 @@
+.subckt or in1 in2 out vdd gnd
+
+MN1 n01 in1 gnd gnd CMOSN W={2*XX*Wmin} L={Lmin}
+MN2 n01 in2 gnd gnd CMOSN W={2*XX*Wmin} L={Lmin}
+MP1 n01 in1 n02 n02 CMOSP W={2*XX*Wmin} L={Lmin}
+MP2 n02 in2 vdd vdd CMOSP W={2*XX*Wmin} L={Lmin}
+
+
+MN3 out n01 gnd gnd CMOSN W={2*XX*Wmin} L={Lmin}
+MP3 out n01 vdd vdd CMOSP W={2*XX*Wmin} L={Lmin}
+
+Cout out gnd 1f
+
+.ends
+

@@ -1,0 +1,13 @@
+.subckt and inp1 inp2 out vdd gnd 
+
+Mp1	outn	inp1	vdd 	vdd 	CMOSP W={2*XX*Wmin} L={Lmin} 
+Mp2	outn	inp2	vdd 	vdd 	CMOSP W={2*XX*Wmin} L={Lmin} 
+Mn1	outn	inp1	nodez 	gnd 	CMOSN W={2*XX*Wmin} L={Lmin}
+Mn2	nodez	inp2	gnd 	gnd     CMOSN W={2*XX*Wmin} L={Lmin}
+
+Mp3	out	 outn	vdd 	vdd 	CMOSP W={2*XX*Wmin} L={Lmin} 
+Mn3	out	 outn	gnd 	gnd 	CMOSN W={2*XX*Wmin} L={Lmin}
+
+Cout out gnd 1f
+
+.ends
